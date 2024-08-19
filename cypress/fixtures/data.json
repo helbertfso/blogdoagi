@@ -1,0 +1,14 @@
+{
+    "user": {
+        "cpf": "",
+        "password": ""
+    },
+    "product": {
+        "category1": "",
+        "category2": ""
+    },
+    "address": {
+        "zipCode": "",
+        "data": ""
+    }
+}

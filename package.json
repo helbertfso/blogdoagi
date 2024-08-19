@@ -1,0 +1,26 @@
+{
+  "name": "projeto-principal",
+  "version": "1.0.1",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "cy:test": "cypress run --config video=false",
+    "cy:open": "cypress open --e2e -b chrome",
+    "cy:dash": "npx cypress run --record --key {secrets_dash}",
+    "cy:tag":  "npx cypress run --env environment=cb-desk --env grepTags=@smoke"
+  },
+  "keywords": [
+    "cypress",
+    "tests",
+    "mocha",
+    "github-actions"
+  ],
+  "devDependencies": {
+    "cypress": "13.6.3",
+    "cypress-mochawesome-reporter": "^3.6.1"
+  },
+  "dependencies": {
+    "faker-br": "^0.4.1"
+  }
+}
