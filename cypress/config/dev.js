@@ -1,6 +1,7 @@
 const dados ={
-    baseUrl: "https://...",
-    baseApi: "https://...",
+    baseUrl: "https://blogdoagi.com.br/",
+    baseUrlMyProfile: "https://blogdoagi.com.br/",
+    baseApi: "https://blogdoagi.com.br/",
     env: {
         ENVIRONMENT: "dev"
     },
@@ -9,4 +10,3 @@ const dados ={
 }
  
 module.exports = dados
-

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       ambiente:
-        description: 'Inserir o ambiente a ser executado os testes: dev / qa / hlg / prd'
+        description: 'Inserir o ambiente a ser executado os testes: dev / qa'
         required: false
         default: 'qa'
       browser:
