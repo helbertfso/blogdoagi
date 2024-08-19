@@ -24,15 +24,15 @@ jobs:
     container:
       image: cypress/browsers:node-20.11.0-chrome-121.0.6167.184-1-ff-123.0-edge-121.0.2277.128-1
     
-    # steps:
-    # - name: Checkout
-    #   user: action/checkout@v3
+    steps:
+    - name: Checkout
+      user: action/checkout@v3
 
-    # - name: Cypress install
-    #   user: cypress-io/github-action@v5
-    #   with:
-    #     runTests: false
-    # - run: yarn cypress info
+    - name: Cypress install
+      user: cypress-io/github-action@v5
+      with:
+        runTests: false
+    - run: yarn cypress info
 
   cypress-run-tests-cloud:
     name: Cypress run cloud
