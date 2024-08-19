@@ -32,7 +32,7 @@ jobs:
       user: cypress-io/github-action@v5
       with:
         runTests: false
-    # - run: yarn cypress info
+    - run: yarn cypress info
 
   cypress-run-tests-cloud:
     name: Cypress run cloud
@@ -49,12 +49,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cypress run
-        # Uses the official Cypress GitHub action https://github.com/cypress-io/github-action
+
+      - name: Install dependencies
         uses: cypress-io/github-action@v6
         with:
-          start: npm start
-          wait-on: 'https://blogdoagi.com.br/'
+          runTests: false
+
+      - name: Cypress run tests
+        uses: cypress-io/github-action@v6
+        with:
+          record: true
+          # start: npm start
+          # wait-on: 'https://blogdoagi.com.br/'
           record: true
           parallel: true
           browser: ${{ github.event.inputs.browser || 'chrome' }}
